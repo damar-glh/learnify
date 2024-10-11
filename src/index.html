@@ -2,52 +2,92 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/output.css" rel="stylesheet">
+    <meta name="description"
+          content="Learnify - A Learning Management System designed to enhance education. Access courses, manage learning resources, and track your progress easily.">
+    <meta name="keywords" content="learning, education, courses, LMS, e-learning, Learnify">
+    <meta name="author" content="Damar Galih">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/learnify.svg">
+    <title>Learnify | Your Education, Simplified</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <section class="navbar">
-    <div class="flex justify-between items-center bg-white px-8 py-4 shadow-md">
-        <!-- Logo Section -->
-        <div class="flex items-center space-x-2">
-            <div class="w-6 h-6 bg-purple-500 rounded-full"></div>
-            <span class="text-gray-800 font-semibold text-lg">Academy</span>
-        </div>
-
-        <!-- Middle Section (Dashboard & Search) -->
-        <div class="flex items-center space-x-6">
-            <span class="text-gray-800 font-medium text-lg">Dashboard</span>
-            <div class="relative">
-                <input type="text" placeholder="Search"
-                       class="pl-8 pr-4 py-2 rounded-full bg-gray-100 text-gray-700 outline-none focus:ring-2 focus:ring-purple-500">
-                <svg class="absolute left-2 top-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                     viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M10 20l4.45-4.45M10 4a7 7 0 00-5.172 11.997A7 7 0 0010 4zm10 14a7 7 0 11-8.255-8.243"/>
-                </svg>
+    <header class="flex">
+        <nav class="flex flex-col items-center w-1/6 h-screen p-5 bg-color-pallet-primary">
+            <div class="flex flex-col items-center my-4">
+                <img src="assets/learnify.svg" alt="Learnify Logo" class="w-28 h-28 rounded-3xl">
             </div>
-            <button class="p-2 bg-gray-100 rounded-full">
-                <svg class="w-6 h-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M15 17h5l-1.405-1.405M4 6h16M5 6a2 2 0 010-4h14a2 2 0 110 4H5zm4 6a4 4 0 110 8H5a4 4 0 010-8h4zm0 2H4"/>
-                </svg>
-            </button>
-        </div>
+            <h1 class="font-normal text-color-pallet-quinary my-4">Overview</h1>
+            <ul class="space-y-2 w-full">
+                <li><a href="#"
+                       class="font-medium text-color-pallet-denary hover:bg-color-pallet-denary hover:text-color-pallet-primary p-3 rounded-3xl ease-in-out duration-150 flex items-center gap-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-layout-dashboard">
+                        <rect width="7" height="9" x="3" y="3" rx="1"/>
+                        <rect width="7" height="5" x="14" y="3" rx="1"/>
+                        <rect width="7" height="9" x="14" y="12" rx="1"/>
+                        <rect width="7" height="5" x="3" y="16" rx="1"/>
+                    </svg>
+                    Dashboard</a></li>
+                <li><a href="#"
+                       class="font-medium text-color-pallet-quinary hover:bg-color-pallet-denary hover:text-color-pallet-primary p-3 rounded-3xl ease-in-out duration-150 flex items-center gap-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-backpack">
+                        <path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+                        <path d="M8 10h8"/>
+                        <path d="M8 18h8"/>
+                        <path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/>
+                        <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+                    </svg>
+                    Course</a></li>
+                <li><a href="#"
+                       class="font-medium text-color-pallet-quinary hover:bg-color-pallet-denary hover:text-color-pallet-primary p-3 rounded-3xl ease-in-out duration-150 flex items-center gap-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-graduation-cap">
+                        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+                        <path d="M22 10v6"/>
+                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+                    </svg>
+                    Grades</a></li>
+                <li><a href="#"
+                       class="font-medium text-color-pallet-quinary hover:bg-color-pallet-denary hover:text-color-pallet-primary p-3 rounded-3xl ease-in-out duration-150 flex items-center gap-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-calendar-range">
+                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                        <path d="M16 2v4"/>
+                        <path d="M3 10h18"/>
+                        <path d="M8 2v4"/>
+                        <path d="M17 14h-6"/>
+                        <path d="M13 18H7"/>
+                        <path d="M7 14h.01"/>
+                        <path d="M17 18h.01"/>
+                    </svg>
+                    Schedule</a></li>
+                <li><a href="#"
+                       class="font-medium text-color-pallet-quinary hover:bg-color-pallet-denary hover:text-color-pallet-primary p-3 rounded-3xl ease-in-out duration-150 flex items-center gap-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-settings">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    Settings</a></li>
+            </ul>
+        </nav>
+        <div class="flex-1 p-5 my-4 bg-color-pallet-primary">
 
-        <!-- Profile Section -->
-        <div class="flex items-center space-x-6">
-            <span class="text-gray-800 font-medium">Profile</span>
-            <button class="p-2 bg-gray-100 rounded-full">
-                <svg class="w-6 h-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                     stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 19l9-5-9-5-9 5 9 5zm0 0V5"/>
-                </svg>
-            </button>
+            <h2 class="text-3xl font-bold">Konten Utama</h2>
+            <p>Ini adalah area konten utama.</p>
         </div>
-    </div>
-
+    </header>
 </section>
 </body>
 </html>
