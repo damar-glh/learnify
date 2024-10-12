@@ -8,6 +8,7 @@ module.exports = {
             },
             colors: {
                 'color-pallet': {
+                    'purple': '#8A70d6',
                     'primary': '#F9F9F9',
                     'secondary': '#F5F5F5',
                     'tertiary': '#E0E0E0',
