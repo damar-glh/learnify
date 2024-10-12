@@ -1,20 +1,15 @@
 const sidebar = document.getElementById('sidebar');
-const minimizeBtn = document.getElementById('minimizeBtn');
-const leftArrow = document.getElementById('leftArrow');
-const rightArrow = document.getElementById('rightArrow');
+const burgerBtn = document.getElementById('burgerBtn');
 const dashboardContainer = document.querySelector('.dashboard-container');
 const courseContainer = document.querySelector('.course-container');
-const profileContainer = document.querySelector('.profile-container');
 const courseBtn = document.getElementById('courseBtn');
 const dashboardBtn = document.getElementById('dashboardBtn');
 
-minimizeBtn.addEventListener('click', function () {
-    sidebar.classList.toggle('lg:w-20');
-    sidebar.classList.toggle('w-1/6');
+burgerBtn.addEventListener('click', function () {
+    sidebar.classList.toggle('hidden');
+    sidebar.classList.toggle('block');
     const spans = sidebar.querySelectorAll('span');
     spans.forEach(span => span.classList.toggle('hidden'));
-    leftArrow.classList.toggle('hidden');
-    rightArrow.classList.toggle('hidden');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
