@@ -2,6 +2,7 @@ const sidebar = document.getElementById('sidebar');
 const burgerBtn = document.getElementById('burgerBtn');
 const dashboardContainer = document.querySelector('.dashboard-container');
 const courseContainer = document.querySelector('.course-container');
+const profileContainer = document.querySelector('.profile-container')
 const closeBtn = document.getElementById('closeBtn');
 const courseBtn = document.getElementById('courseBtn');
 const dashboardBtn = document.getElementById('dashboardBtn');
@@ -40,10 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 courseBtn.addEventListener('click', function () {
     dashboardContainer.classList.add('hidden');
+    profileContainer.classList.add('lg:hidden')
     courseContainer.classList.remove('hidden');
 });
 
 dashboardBtn.addEventListener('click', function () {
     courseContainer.classList.add('hidden');
     dashboardContainer.classList.remove('hidden');
+    profileContainer.classList.remove('lg:hidden')
 });
