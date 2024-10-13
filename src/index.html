@@ -11,599 +11,394 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/learnify.svg">
     <title>Learnify | Your Education, Simplified</title>
     <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
           rel="stylesheet">
 </head>
 <body>
-<section class="dashboard flex min-h-screen w-full overflow-x-hidden">
-    <header id="sidebar"
-            class="hidden min-h-screen fixed w-1/2 z-20 lg:static lg:block lg:w-1/6 p-5 bg-color-pallet-primary transition-all duration-300 ease-in-out">
-        <div class="fixed lg:static lg:hidden right-1/2 top-0 p-4 text-color-pallet-quinary">
-            <button id="closeBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="lucide lucide-circle-x">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="m15 9-6 6"/>
-                    <path d="m9 9 6 6"/>
-                </svg>
-            </button>
-        </div>
-        <nav class="flex flex-col items-center mt-4">
-            <div class="flex flex-col items-center my-4">
-                <img src="assets/learnify.svg" alt="Learnify Logo" class="w-28 h-28 rounded-3xl">
+<section id="home" class="relative bg-cover min-h-screen w-full light-bg">
+    <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur shadow-lg"></div>
+    <header>
+        <nav class="fixed top-0 left-0 w-full flex justify-between md:justify-around items-center p-5 md:p-7 z-10">
+            <div class="text-white font-black text-2xl md:text-3xl text-center">
+                <a href="index.html">Learn<strong class="text-color-pallet-quaternary">ify.</strong></a>
             </div>
-            <h1 class="font-medium text-color-pallet-quinary my-4"><span>Overview</span></h1>
-            <ul class="space-y-2 w-full">
-                <li><a href="#"
-                       id="dashboardBtn"
-                       class="menu-items font-medium text-color-pallet-denary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-layout-dashboard">
-                        <rect width="7" height="9" x="3" y="3" rx="1"/>
-                        <rect width="7" height="5" x="14" y="3" rx="1"/>
-                        <rect width="7" height="9" x="14" y="12" rx="1"/>
-                        <rect width="7" height="5" x="3" y="16" rx="1"/>
-                    </svg>
-                    <span>Dashboard</span></a></li>
-                <li><a href="#"
-                       id="courseBtn"
-                       class="menu-items font-medium text-color-pallet-quinary p-3  hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-backpack">
-                        <path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
-                        <path d="M8 10h8"/>
-                        <path d="M8 18h8"/>
-                        <path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/>
-                        <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
-                    </svg>
-                    <span>Course</span></a></li>
-                <li><a href="#"
-                       class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-graduation-cap">
-                        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
-                        <path d="M22 10v6"/>
-                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
-                    </svg>
-                    <span>Grades</span></a></li>
-                <li><a href="#"
-                       class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-circle-user-round">
-                        <path d="M18 20a6 6 0 0 0-12 0"/>
-                        <circle cx="12" cy="10" r="4"/>
-                        <circle cx="12" cy="12" r="10"/>
-                    </svg>
-                    <span>Mentors</span></a></li>
-                <li><a href="#"
-                       class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-calendar-range">
-                        <rect width="18" height="18" x="3" y="4" rx="2"/>
-                        <path d="M16 2v4"/>
-                        <path d="M3 10h18"/>
-                        <path d="M8 2v4"/>
-                        <path d="M17 14h-6"/>
-                        <path d="M13 18H7"/>
-                        <path d="M7 14h.01"/>
-                        <path d="M17 18h.01"/>
-                    </svg>
-                    <span>Schedule</span></a></li>
-                <li><a href="#"
-                       class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-settings">
-                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-                        <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                    <span>Settings</span></a></li>
+            <ul class="nav-items hidden md:flex md:space-x-8 md:text-base text-color-pallet-quinary md:gap-3.5 font-bold">
+                <li><a href="#home" class="nav-links active">Home</a></li>
+                <li><a href="#courses" class="nav-links">Courses</a></li>
+                <li><a href="#about" class="nav-links">About</a></li>
+                <li><a href="#contact" class="nav-links">Contact</a></li>
             </ul>
-        </nav>
-        <div class="hidden lg:block bg-color-pallet-denary my-10 p-4 rounded-3xl">
-            <div class="text-center lg:text-left">
-                <h3 class="text-2xl font-bold text-color-pallet-primary">Upgrade to Plus</h3>
-                <p class="text-base text-color-pallet-primary mt-2">
-                    Unlock exclusive features with Plus. Enjoy better performance & premium support.
-                </p>
-            </div>
-            <div class="my-4 text-center">
-                <button class="px-6 py-3 bg-color-pallet-denary text-color-pallet-primary font-medium border-2 rounded-3xl hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
-                    Upgrade Now
+            <div class="flex gap-5">
+                <button id="light-btn"
+                        class="btn-light md:flex font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300"
+                        onclick="setLightMode()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-moon-star">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/>
+                        <path d="M20 3v4"/>
+                        <path d="M22 5h-4"/>
+                    </svg>
                 </button>
-                <p class="text-sm text-color-pallet-quinary mt-2">Starting at only $9.99/month</p>
+                <button id="dark-btn"
+                        class="md:flex font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300"
+                        onclick="setDarkMode()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-sun">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2"/>
+                        <path d="M12 20v2"/>
+                        <path d="m4.93 4.93 1.41 1.41"/>
+                        <path d="m17.66 17.66 1.41 1.41"/>
+                        <path d="M2 12h2"/>
+                        <path d="M20 12h2"/>
+                        <path d="m6.34 17.66-1.41 1.41"/>
+                        <path d="m19.07 4.93-1.41 1.41"/>
+                    </svg>
+                </button>
+                <button class="btn-nav flex md:hidden font-semibold text-color-pallet-primary px-3 py-2 md:px-4 md:py-2 rounded-3xl bg-opacity-20 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-menu">
+                        <line x1="3" x2="21" y1="12" y2="12"/>
+                        <line x1="3" x2="21" y1="6" y2="6"/>
+                        <line x1="3" x2="21" y1="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <main class="flex flex-col items-center justify-center gap-3.5 h-full absolute w-full text-center text-white px-6 md:px-0">
+            <h1 class="text-3xl md:text-5xl font-bold mb-2 md:mb-4">Simplify Your Learning</h1>
+            <h2 class="text-4xl md:text-6xl font-bold"><strong class="text-color-pallet-quinary">Learn</strong> <strong
+                    class="text-color-pallet-quaternary">Better,</strong> Learn Faster</h2>
+            <p class="text-sm md:text-base font-normal p-2 md:p-4">Unlock endless learning opportunities with
+                personalized courses tailored to your goals.</p>
+            <a href="#courses">
+                <button class="flex gap-2.5 mt-2 font-semibold text-color-pallet-primary px-4 py-2 md:px-6 md:py-3 rounded-3xl border-2 border-color-pallet-800 bg-opacity-25 bg-white hover:bg-color-pallet-primary hover:text-color-pallet-octonary ease-in-out duration-300">
+                    Browse Course
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-arrow-right">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 12h8"/>
+                        <path d="m12 16 4-4-4-4"/>
+                    </svg>
+                </button>
+            </a>
+        </main>
+        <div class="absolute bottom-5 md:bottom-10 w-full flex flex-col md:flex-row justify-center items-center p-4 md:p-7 space-y-5 md:space-y-0 space-x-0 md:space-x-16 text-white text-xs md:text-sm">
+            <div class="hidden sm:flex gap-3 md:gap-5 items-center">
+                <a href="https://www.instagram.com" target="_blank"
+                   class="text-color-pallet-quaternary hover:text-color-pallet-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-instagram">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="https://id-id.facebook.com" target="_blank"
+                   class="text-color-pallet-quaternary hover:text-color-pallet-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-facebook">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/damar-glh/wanderlust" target="_blank"
+                   class="text-color-pallet-quaternary hover:text-color-pallet-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-github">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
-    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-80 z-10"></div>
-    <div class="flex flex-col lg:flex-row w-full min-h-screen">
-        <div class="w-full min-h-screen">
-            <div class="flex w-full justify-between items-center p-4 bg-color-pallet-primary">
-                <div class="flex lg:hidden">
-                    <button id="burgerBtn"
-                            class="bg-color-pallet-denary text-white p-2 rounded-full transition-all duration-300 ease-in-out">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-menu">
-                            <line x1="4" x2="20" y1="12" y2="12"/>
-                            <line x1="4" x2="20" y1="6" y2="6"/>
-                            <line x1="4" x2="20" y1="18" y2="18"/>
-                        </svg>
-                    </button>
-                </div>
-                <input type="text" placeholder="Search..."
-                       class="w-full mx-5 p-3 rounded-3xl border-2 border-color-pallet-quinary text-base text-center">
-                <div class="flex items-center">
-                    <button class="text-color-pallet-quinary cursor-pointer hover:text-color-pallet-denary p-3 ease-in-out duration-150">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-bell-dot">
-                            <path d="M19.4 14.9C20.2 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6 .7 0 1.3.1 1.9.3"/>
-                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
-                            <circle cx="18" cy="8" r="3"/>
-                        </svg>
-                    </button>
-                    <button id="profileBtn"
-                            class="text-color-pallet-quinary cursor-pointer hover:text-color-pallet-denary p-3 ease-in-out duration-150">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-circle-user-round">
-                            <path d="M18 20a6 6 0 0 0-12 0"/>
-                            <circle cx="12" cy="10" r="4"/>
-                            <circle cx="12" cy="12" r="10"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="dashboard-container w-full min-h-screen p-5 space-y-2 bg-color-pallet-primary flex flex-col justify-around">
-                <h1 class="font-black text-4xl lg:text-2xl">Dashboard</h1>
-                <div class="bg-white rounded-3xl p-5">
-                    <div class="flex flex-col md:flex-row items-center justify-around">
-                        <div class="flex-wrap">
-                            <h1 class="text-2xl font-semibold text-color-pallet-denary">Sharpen Your Skills With <br>
-                                Professional Online Courses</h1>
-                        </div>
-                        <div class="flex flex-col p-2.5 md:w-1/2">
-                            <p>
-                                Expand your knowledge and stay ahead in your career with the best online courses in the
-                                industry. Discover a wide variety of courses tailored to your learning goals. Start
-                                today
-                                and unlock your full potential.
-                            </p>
-                            <button class="w-full md:w-1/3 flex items-center justify-center gap-3.5 my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary font-medium border-2 rounded-3xl hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
-                                Join
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="lucide lucide-circle-chevron-right">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="m10 8 4 4-4 4"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row justify-around gap-3.5">
-                    <div class="flex items-center justify-start md:justify-center gap-3.5 bg-white p-4 rounded-3xl w-full md:w-1/4">
-                        <button class="text-color-pallet-primary bg-color-pallet-denary rounded-3xl p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="lucide lucide-bell">
-                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
-                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
-                            </svg>
-                        </button>
-                        <div>
-                            <h2 class="text-xl font-semibold">Front-end</h2>
-                            <p class="text-xs text-color-pallet-quinary">8/15 Watched</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-start md:justify-center gap-3.5 bg-white p-4 rounded-3xl w-full md:w-1/4">
-                        <button class="text-color-pallet-primary bg-color-pallet-denary rounded-3xl p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="lucide lucide-bell">
-                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
-                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
-                            </svg>
-                        </button>
-                        <div>
-                            <h2 class="text-xl font-semibold">Back-end</h2>
-                            <p class="text-xs text-color-pallet-quinary">10/25 Watched</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-start md:justify-center gap-3.5 bg-white p-4 rounded-3xl w-full md:w-1/4">
-                        <button class="text-color-pallet-primary bg-color-pallet-denary rounded-3xl p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="lucide lucide-bell">
-                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
-                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
-                            </svg>
-                        </button>
-                        <div>
-                            <h2 class="text-xl font-semibold">UI/UX</h2>
-                            <p class="text-xs text-color-pallet-quinary">8/10 Watched</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-start md:justify-center gap-3.5 bg-white p-4 rounded-3xl w-full md:w-1/4">
-                        <button class="text-color-pallet-primary bg-color-pallet-denary rounded-3xl p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="lucide lucide-bell">
-                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
-                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
-                            </svg>
-                        </button>
-                        <div>
-                            <h2 class="text-xl font-semibold">Product Manager</h2>
-                            <p class="text-xs text-color-pallet-quinary">10/20 Watched</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-4xl lg:text-2xl font-black my-4">New Homework</h2>
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-3.5">
-                        <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                            <img src="https://i.ytimg.com/vi/yfMViivBMTM/maxresdefault.jpg"
-                                 alt="UI/UX Homework"
-                                 class="w-full rounded-xl grayscale hover:grayscale-0 cursor-pointer ease-in-out duration-300">
-                            <div class="flex items-center gap-3 justify-between">
-                                <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                                    UI/UX</h3>
-                                <h3 class="text-sm font-bold bg-red-600 p-2 rounded-3xl w-1/2 text-white text-center">
-                                    Late</h3>
-                            </div>
-                            <h4 class="text-xl font-semibold">Creating UI for a Responsive E-Commerce Website</h4>
-                            <p class="text-color-pallet-quinary font-normal">Due Date: October 3, 2024</p>
-                            <button disabled
-                                    class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl">
-                                Submit Late
-                            </button>
-                        </div>
-                        <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                            <img src="https://image.web.id/images/Membuat-Landing-Page-Website-dengan-Bootstrap-4.jpg"
-                                 alt="Frontend Homework"
-                                 class="w-full rounded-xl grayscale hover:grayscale-0 cursor-pointer ease-in-out duration-300">
-                            <div class="flex items-center gap-3 justify-between">
-                                <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                                    Front-end</h3>
-                                <h3 class="text-sm font-bold bg-green-600 p-2 rounded-3xl w-1/2 text-white text-center">
-                                    Ontime</h3>
-                            </div>
-                            <h4 class="text-xl font-semibold">Creating a Website Landing Page with Bootstrap 4</h4>
-                            <p class="text-color-pallet-quinary font-normal">Due Date: October 10, 2024</p>
-                            <button disabled
-                                    class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl">
-                                Submited
-                            </button>
-                        </div>
-                        <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                            <img src="https://image.web.id/images/Pengenalan-Database-Menggunakan-MySQL.jpg"
-                                 alt="Backend Homework"
-                                 class="w-full rounded-xl grayscale hover:grayscale-0 cursor-pointer ease-in-out duration-300">
-                            <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                                Back-end</h3>
-                            <h4 class="text-xl font-semibold">Creating a MySQL database for Learning Website</h4>
-                            <p class="text-color-pallet-quinary font-normal">Due Date: October 24, 2024</p>
-                            <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                                Submit Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="course-container hidden w-full min-h-screen p-5 space-y-2 bg-color-pallet-primary">
-                <h2 class="text-4xl lg:text-2xl font-black my-4">My Course</h2>
-                <div class="flex flex-wrap justify-center gap-3.5 lg:gap-10">
-                    <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                        <img src="https://ik.imagekit.io/6ix6n7mhslj/Roadmap_WEBP/Frontend_Lanjut_MhibvT4FZ_.webp"
-                             alt="Frontend Course"
-                             class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 cursor-pointer">
-                        <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                            Front-end
-                        </h3>
-                        <h4 class="text-xl font-semibold">Front-end Course</h4>
-                        <div class="h-1.5 bg-color-pallet-quinary rounded-full">
-                            <div class="bg-color-pallet-purple h-full rounded-full" style="width: 60%;"></div>
-                        </div>
-                        <p>
-                            Learn the basics of front-end development with this course. You will learn how to
-                            create
-                            a website from scratch using HTML, CSS, and JavaScript.
-                        </p>
-                        <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                            Continue
-                        </button>
-                    </div>
-                    <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                        <img src="https://dashboard.primakara.ac.id/uploads/small_Apa_Pekerjaan_UI_UX_Designer_Ini_Prospek_Karirnya_1b81c6c0c3.jpg"
-                             alt="UI/UX Course"
-                             class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 cursor-pointer">
-                        <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                            UI/UX
-                        </h3>
-                        <h4 class="text-xl font-semibold">UI/UX Course</h4>
-                        <div class="h-1.5 bg-color-pallet-quinary rounded-full">
-                            <div class="bg-color-pallet-purple h-full rounded-full" style="width: 55%;"></div>
-                        </div>
-                        <p>
-                            Explore the principles of user interface and user experience design. Learn how to
-                            create
-                            user-friendly interfaces through design thinking and prototyping.
-                        </p>
-                        <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                            Continue
-                        </button>
-                    </div>
-                    <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                        <img src="https://ik.imagekit.io/6ix6n7mhslj/Roadmap_WEBP/Backend-Dasar_zE2CG8BL0go.webp"
-                             alt="Backend Course"
-                             class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 cursor-pointer">
-                        <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                            Back-end
-                        </h3>
-                        <h4 class="text-xl font-semibold">Back-end Course</h4>
-                        <div class="h-1.5 bg-color-pallet-quinary rounded-full">
-                            <div class="bg-color-pallet-purple h-full rounded-full" style="width: 0%;"></div>
-                        </div>
-                        <p>
-                            Dive into the world of back-end development. This course covers server-side
-                            programming,
-                            databases, and API creation using PHP and Node.js.
-                        </p>
-                        <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                            Continue
-                        </button>
-                    </div>
-                    <div class="lg:max-w-[320px] p-4 bg-white rounded-3xl space-y-4">
-                        <img src="https://res.cloudinary.com/arkademi-tech/images/c_scale,w_860,h_483/f_auto,q_auto/v1665663183/product-manager/product-manager.jpeg?_i=AA"
-                             alt="PM Course"
-                             class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 cursor-pointer">
-                        <h3 class="text-sm font-bold bg-color-pallet-denary p-2 rounded-3xl w-1/2 text-white text-center">
-                            Product Manager
-                        </h3>
-                        <h4 class="text-xl font-semibold">Project Manager Course</h4>
-                        <div class="h-1.5 bg-color-pallet-quinary rounded-full">
-                            <div class="bg-color-pallet-purple h-full rounded-full" style="width: 0%;"></div>
-                        </div>
-                        <p>
-                            Learn the skills needed to manage a project from start to finish. This course covers
-                            project planning, execution and monitoring using Agile methodologies.
-                        </p>
-                        <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <footer class="lg:hidden w-full bg-color-pallet-denary text-color-pallet-primary p-4 text-center">
-                <p>&copy; 2024 Learnify. All rights reserved.</p>
-            </footer>
-            <div id="userInfo"
-                 class="hidden fixed z-30 -top-5 md:top-12 left-1/2 transform -translate-x-1/2 w-max md:max-w-6xl bg-white p-6 mt-20 rounded-3xl transition-all duration-300 ease-in-out">
-                <div class="relative mb-4">
-                    <button id="btnUserClose"
-                            class="absolute right-0 top-0 text-color-pallet-quinary cursor-pointer hover:text-color-pallet-denary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-circle-x">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m15 9-6 6"/>
-                            <path d="m9 9 6 6"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex items-center justify-center md:justify-between p-4">
-                    <div class="flex items-center flex-col md:flex-row">
-                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg?t=st=1728796139~exp=1728799739~hmac=1d04f577c98fffa4a9137048daa072fba7ffde13c8d1c1a93aae6f544b902501&w=740"
-                             alt="User Profile"
-                             class="w-24 h-24 rounded-full">
-                        <div class="ml-4">
-                            <h2 class="text-2xl font-semibold">Damar Galih</h2>
-                            <p class="text-sm text-color-pallet-quinary">Sleman, Yogyakarta</p>
-                        </div>
-                    </div>
-                    <button class="hidden md:flex items-center px-3 py-2 gap-2 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                        Edit
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-pencil">
-                            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
-                            <path d="m15 5 4 4"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="my-4 p-4">
-                    <div class="flex justify-between">
-                        <h3 class="text-xl font-semibold">Personal Information</h3>
-                        <button class="hidden md:flex items-center px-3 py-2 gap-2 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                            Edit
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="lucide lucide-pencil">
-                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
-                                <path d="m15 5 4 4"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <p class="text-color-pallet-denary">First Name</p>
-                            <p class="text-color-pallet-quinary">Damar</p>
-                        </div>
-                        <div>
-                            <p class="text-color-pallet-denary">Last Name</p>
-                            <p class="text-color-pallet-quinary">Galih</p>
-                        </div>
-                        <div>
-                            <p class="text-color-pallet-denary">Email Address</p>
-                            <p class="text-color-pallet-quinary">damargalih@gmail.com</p>
-                        </div>
-                        <div>
-                            <p class="text-color-pallet-denary">Phone</p>
-                            <p class="text-color-pallet-quinary">+628123456789</p>
-                        </div>
-                        <div>
-                            <p class="text-color-pallet-denary">Bio</p>
-                            <p class="text-color-pallet-quinary">Striving for excellence every day.</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="hidden md:flex justify-between p-4">
-                        <h3 class="text-xl font-semibold">Address</h3>
-                        <button class="flex items-center px-3 py-2 gap-2 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                            Edit
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="lucide lucide-pencil">
-                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
-                                <path d="m15 5 4 4"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="hidden md:grid grid-cols-2 gap-6 my-4 p-4">
-                        <div>
-                            <p class="text-color-pallet-denary">Country</p>
-                            <p class="text-color-pallet-quinary">Indonesia</p>
-                        </div>
-                        <div>
-                            <p class="text-color-pallet-denary">City/State</p>
-                            <p class="text-color-pallet-quinary">Sleman, Yogyakarta</p>
-                        </div>
-                        <div>
-                            <p class="text-color-pallet-denary">Postal Code</p>
-                            <p class="text-color-pallet-quinary">54353</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="flex md:hidden w-full items-center justify-center px-3 py-2 gap-2 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                    Edit
+</section>
+<section id="courses" class="py-10 dark:bg-black bg-color-pallet-primary min-h-screen w-full">
+    <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center mb-10">
+        <div class="w-full flex flex-col justify-center lg:justify-start gap-5">
+            <h2 class="text-4xl md:text-5xl dark:text-color-pallet-primary font-black text-center lg:text-left">
+                Top Programming Courses</h2>
+            <p class="text-4xl md:text-5xl dark:text-color-pallet-primary font-black text-center lg:text-left">
+                for <strong class="text-color-pallet-quinary">the</strong><strong class="text-color-pallet-quaternary">Future</strong>
+            </p>
+        </div>
+        <div class="w-full text-center px-6 lg:px-0 lg:text-right space-y-6 mt-8">
+            <p class="text-color-pallet-septenary dark:text-color-pallet-primary lg:text-left text-base leading-relaxed">
+                Whether you're starting your journey into the world of coding or aiming to advance your skills, our
+                curated selection of programming courses is designed to help you master the tools and techniques needed
+                to succeed in today's tech-driven world. Dive into front-end, back-end development, or sharpen your
+                skills in UI/UX design and product management.
+            </p>
+            <div class="w-full flex justify-center lg:justify-start">
+                <button class="flex mx-auto md:mx-0 gap-3.5 mt-2 font-semibold dark:text-color-pallet-primary px-6 py-3 rounded-3xl border-2 border-color-pallet-denary hover:bg-black hover:text-color-pallet-primary dark:border-2 dark:bg-opacity-25 dark:bg-white dark:hover:bg-color-pallet-primary dark:hover:text-color-pallet-octonary dark:border-color-pallet-primary ease-in-out duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-pencil">
-                        <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
-                        <path d="m15 5 4 4"/>
+                         class="lucide lucide-circle-arrow-left">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M16 12H8"/>
+                        <path d="m12 8-4 4 4 4"/>
                     </svg>
+                    Explore Courses
                 </button>
             </div>
-            <div id="overlayUserInfo"
-                 class="hidden fixed inset-0 bg-black bg-opacity-80 z-20 transition-all duration-300 ease-in-out"></div>
         </div>
-        <div class="profile-container hidden lg:block w-1/3 min-h-screen p-5 space-y-6 bg-color-pallet-primary">
-            <div>
-                <div class="flex justify-between items-center">
-                    <h2 class="text-2xl font-semibold my-2">Profile</h2>
-                    <button class="text-color-pallet-quinary cursor-pointer hover:text-color-pallet-denary p-3 transition-all ease-in-out duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-pencil">
-                            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
-                            <path d="m15 5 4 4"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="text-center">
-                    <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg?t=st=1728796139~exp=1728799739~hmac=1d04f577c98fffa4a9137048daa072fba7ffde13c8d1c1a93aae6f544b902501&w=740"
-                         alt="User Profile" class="w-24 h-24 rounded-full mx-auto mb-4">
-                    <h3 class="text-lg font-semibold">Damar Galih</h3>
-                    <p class="text-sm text-color-pallet-quinary">Sleman, Yogyakarta</p>
-                    <p class="text-sm italic text-color-pallet-quinary my-2">"Striving for excellence every
-                        day."</p>
-                </div>
-                <div class="bg-white p-4 rounded-3xl my-4">
-                    <h3 class="text-lg font-semibold mb-2">Homework Progress</h3>
-                    <div class="my-4">
-                        <p class="text-sm">Front-end</p>
-                        <div class="w-full bg-gray-200 h-2 rounded-3xl">
-                            <div class="bg-color-pallet-purple h-full rounded-3xl" style="width: 100%;"></div>
-                        </div>
-                    </div>
-                    <div class="my-4">
-                        <p class="text-sm">UI/UX</p>
-                        <div class="w-full bg-gray-200 h-2 rounded-3xl">
-                            <div class="bg-color-pallet-purple h-full rounded-3xl" style="width: 80%;"></div>
-                        </div>
+    </div>
+    <div class="container px-6 lg:px-0 mx-auto flex flex-col lg:flex-row justify-between items-center gap-5">
+        <div class="flex flex-col w-full lg:w-1/2 relative cursor-pointer grayscale hover:grayscale-0 ease-in-out duration-300">
+            <a href="frontend.html">
+                <img src="https://images.pexels.com/photos/16129703/pexels-photo-16129703/free-photo-of-man-coding-on-computers-sitting-at-desk.jpeg?auto=compress&cs=tinysrgb&w=600"
+                     alt="Front-End Development" class="w-full h-64 rounded-3xl object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-25 rounded-3xl flex items-center justify-center">
+                    <div class="text-color-pallet-primary p-4">
+                        <h3 class="text-3xl text-center font-bold">Front-End Development</h3>
+                        <p class="mt-2 text-center text-color-pallet-primary font-medium">Create Stunning User
+                            Interfaces</p>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-3xl my-4">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-lg font-semibold mb-2">Your Mentor</h3>
-                        <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="lucide lucide-circle-plus">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12h8"/>
-                                <path d="M12 8v8"/>
-                            </svg>
-                        </a>
+            </a>
+        </div>
+        <div class="flex flex-col w-full lg:w-1/2 relative cursor-pointer grayscale hover:grayscale-0 ease-in-out duration-300">
+            <a href="backend.html">
+                <img src="https://images.pexels.com/photos/6804604/pexels-photo-6804604.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                     alt="Back-End Development" class="w-full h-64 rounded-3xl object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-25 rounded-3xl flex items-center justify-center">
+                    <div class="text-color-pallet-primary p-4">
+                        <h3 class="text-3xl text-center font-bold">Back-End Development</h3>
+                        <p class="mt-2 text-center text-color-pallet-primary font-medium">Build Powerful Server-Side
+                            Solutions</p>
                     </div>
-                    <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/premium-psd/3d-render-avatar-character_23-2150611774.jpg?w=740"
-                             alt="mentor profile" class="h-14 w-14 rounded-full">
-                        <div>
-                            <p class="font-medium">Dimas Asya</p>
-                            <p class="text-sm text-color-pallet-quinary">Fullstack Developer</p>
-                        </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
-                            Follow
-                        </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container px-6 lg:px-0 mx-auto mt-5 flex flex-col lg:flex-row justify-between items-center gap-5">
+        <div class="flex flex-col w-full lg:w-1/2 relative cursor-pointer grayscale hover:grayscale-0 ease-in-out duration-300">
+            <a href="uiux.html">
+                <img src="https://images.pexels.com/photos/326518/pexels-photo-326518.jpeg?auto=compress&cs=tinysrgb&w=600"
+                     alt="UI/UX Design" class="w-full h-64 rounded-3xl object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-25 rounded-3xl flex items-center justify-center">
+                    <div class="text-color-pallet-primary p-4">
+                        <h3 class="text-3xl text-center font-bold">UI/UX Design</h3>
+                        <p class="mt-2 text-center text-color-pallet-primary font-medium">Design Seamless User
+                            Experiences</p>
                     </div>
-                    <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611734.jpg?t=st=1728795903~exp=1728799503~hmac=1e111e6ae4d539d21abb4606e9008dfefb15e1fdf2596c26ab077dc93653a222&w=740"
-                             alt="mentor profile" class="h-14 w-14 rounded-full">
-                        <div>
-                            <p class="font-medium">Sri Dewi Amalia</p>
-                            <p class="text-sm text-color-pallet-quinary">Back-end Developer</p>
-                        </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
-                            Follow
-                        </button>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col w-full lg:w-1/2 relative cursor-pointer grayscale hover:grayscale-0 ease-in-out duration-300">
+            <a href="productmanagement.html">
+                <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600"
+                     alt="Product Management" class="w-full h-64 rounded-3xl object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-25 rounded-3xl flex items-center justify-center">
+                    <div class="text-color-pallet-primary p-4">
+                        <h3 class="text-3xl text-center font-bold">Product Management</h3>
+                        <p class="mt-2 text-center text-color-pallet-primary font-medium">Lead the Development of
+                            Innovative Products</p>
                     </div>
-                    <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611753.jpg?t=st=1728797508~exp=1728801108~hmac=682a2e7c76618ad6c7bf58b0e7e957c1deecb3f170465ecd5e1075ebfa701a25&w=740"
-                             alt="mentor profile" class="h-14 w-14 rounded-full">
-                        <div>
-                            <p class="font-medium">Aji Danu Setiawan</p>
-                            <p class="text-sm text-color-pallet-quinary">Front-end Developer</p>
-                        </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
-                            Follow
-                        </button>
-                    </div>
-                    <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/premium-psd/3d-render-avatar-character_23-2150611783.jpg?w=740"
-                             alt="mentor profile" class="h-14 w-14 rounded-full">
-                        <div>
-                            <p class="font-medium">Arya Panangsang</p>
-                            <p class="text-sm text-color-pallet-quinary">UI/UX Designer</p>
-                        </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
-                            Follow
-                        </button>
-                    </div>
-                    <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
-                        See All
-                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="about"
+         class="py-16 dark:bg-black md:bg-color-pallet-primary min-h-screen w-full flex justify-center items-center">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-8">
+        <div class="flex flex-col p-7 lg:p-0 lg:w-2/4 md:text-left space-y-10">
+            <h2 class="text-color-pallet-quinary font-semibold text-3xl md:text-4xl">How It Started</h2>
+            <h1 class="text-4xl dark:text-color-pallet-primary md:text-5xl font-bold">Our Dream is to Empower Lifelong
+                Learning</h1>
+            <p class="dark:text-color-pallet-primary text-base w-3/4">
+                Learnify was founded by passionate educators damar galih, with the vision of making education accessible
+                for everyone.
+                Their mission is to build a platform where learners can easily access courses and educational resources.
+                From beginner to expert levels,
+                Learnify brings the best learning experiences right to your fingertips.
+            </p>
+        </div>
+        <div class="flex flex-col w-full lg:w-1/3 relative space-y-8 p-7 lg:p-0">
+            <div class="cursor-pointer grayscale hover:grayscale-0 ease-in-out duration-300">
+                <img src="assets/learnify.svg"
+                     alt="Lifelong Learning" class="w-full h-full object-cover rounded-3xl">
+            </div>
+            <div class="flex flex-wrap gap-6">
+                <div class="p-6 text-center flex-1 min-w-[45%]">
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">2</h2>
+                    <p class="text-color-pallet-quinary">Years of Service</p>
+                </div>
+                <div class="p-6 text-center flex-1 min-w-[45%]">
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">10+</h2>
+                    <p class="text-color-pallet-quinary">Courses Available</p>
+                </div>
+                <div class="p-6 text-center flex-1 min-w-[45%]">
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">100+</h2>
+                    <p class="text-color-pallet-quinary">Happy Learners</p>
+                </div>
+                <div class="p-6 text-center flex-1 min-w-[45%]">
+                    <h2 class="text-3xl dark:text-color-pallet-primary font-bold">100K+</h2>
+                    <p class="text-color-pallet-quinary">Hours of Learning</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<script src="js/app.js"></script>
+<section id="contact"
+         class="py-16 dark:bg-black bg-color-pallet-primary min-h-screen w-full flex justify-center items-center">
+    <div class="container mx-auto px-4">
+        <h3 class="text-4xl md:text-5xl dark:text-color-pallet-primary font-bold text-center mb-10">Get in Touch</h3>
+        <div class="max-w-5xl mx-auto p-8">
+            <form action="#" method="POST" class="space-y-6">
+                <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
+                    <div class="flex-1">
+                        <label for="name" class="block dark:text-color-pallet-primary font-medium">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name"
+                               class="mt-1 block w-full p-3 rounded-md shadow-sm focus:border-color-pallet-denary"
+                               required>
+                    </div>
+                    <div class="flex-1">
+                        <label for="email" class="block dark:text-color-pallet-primary font-medium">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com"
+                               class="mt-1 block w-full p-3 rounded-md shadow-sm" required>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
+                    <div class="flex-1">
+                        <label for="interest" class="block dark:text-color-pallet-primary font-medium">Course
+                            Interest</label>
+                        <select id="interest" name="interest" class="mt-1 block w-full p-3 rounded-md">
+                            <option>Front-End Development</option>
+                            <option>Back-End Development</option>
+                            <option>UI/UX Design</option>
+                            <option>Product Management</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="flex-1">
+                        <label for="budget" class="block dark:text-color-pallet-primary font-medium">Your Budget</label>
+                        <select id="budget" name="budget" class="mt-1 block w-full p-3 rounded-md shadow-sm">
+                            <option>Less than $1,000</option>
+                            <option>$1,000 - $5,000</option>
+                            <option>$5,000 - $10,000</option>
+                            <option>More than $10,000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
+                    <div class="flex-1">
+                        <label for="destination" class="block dark:text-color-pallet-primary font-medium">Preferred
+                            Course</label>
+                        <input type="text" id="destination" name="destination" placeholder="e.g., Front-End, UI/UX"
+                               class="mt-1 block w-full p-3 rounded-md shadow-sm" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="message"
+                           class="block dark:text-color-pallet-primary font-medium">Message</label>
+                    <textarea id="message" name="message" rows="5"
+                              placeholder="Let us know your learning goals or questions"
+                              class="mt-1 block w-full p-3 rounded-md"></textarea>
+                </div>
+                <button type="submit"
+                        class="flex mx-auto gap-3.5 py-3 px-6 font-semibold dark:text-color-pallet-primary rounded-3xl border-2 border-color-pallet-denary hover:bg-black hover:text-color-pallet-primary dark:border-2 dark:bg-opacity-25 dark:bg-white dark:hover:bg-color-pallet-primary dark:hover:text-color-pallet-octonary  dark:border-color-pallet-primary ease-in-out duration-300">
+                    Send Now
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-send-horizontal">
+                        <path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/>
+                        <path d="M6 12h16"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="py-16 p-7 lg:p-0 dark:bg-black bg-color-pallet-primary">
+    <div class="container mx-auto flex flex-col md:flex-row justify-around">
+        <div class="flex flex-col mb-7 md:mb-0 text-center md:text-left">
+            <div class="text-3xl md:text-4xl dark:text-color-pallet-primary font-bold">Learn<strong
+                    class="text-color-pallet-quaternary">ify.</strong></div>
+            <p class="text-base dark:text-color-pallet-primary mt-2">Discover a world of knowledge and
+                <br> embark on your learning journey today.</p>
+            <div class="flex gap-5 dark:text-color-pallet-primary justify-center md:justify-start py-7">
+                <a href="https://twitter.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-twitter">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-instagram">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="https://id-id.facebook.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-facebook">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-youtube">
+                        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
+                        <path d="m10 15 5-3-5-3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect width="4" height="12" x="2" y="9"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row text-center md:text-left items-center md:items-start gap-10">
+            <div class="flex flex-col space-y-4 mb-7 md:mb-0">
+                <h4 class="font-semibold dark:text-color-pallet-primary text-xl md:text-2xl">Learnify</h4>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Home</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Courses</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">About</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Contact</a>
+            </div>
+            <div class="flex flex-col space-y-4 mb-7 md:mb-0">
+                <h4 class="font-semibold dark:text-color-pallet-primary text-xl md:text-2xl">Subjects</h4>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Front-end</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Back-end</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Ui/UX</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Product Management</a>
+            </div>
+            <div class="flex flex-col space-y-4 mb-7 md:mb-0">
+                <h4 class="font-semibold dark:text-color-pallet-primary text-xl md:text-2xl">Resources</h4>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Blog</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Webinars</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Events</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Help Centre</a>
+                <a href="#" class="text-color-pallet-quinary hover:text-color-pallet-denary">Support</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer id="copy-right" class="w-full bg-black p-7">
+    <p class="text-center text-color-pallet-primary">© 2024 Learnify. All rights reserved.</p>
+</footer>
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: #F9F9F9;
+}
+
+.nav-links:hover:not(.active) {
+    color: #F9F9F9;
+}
+
+.dark-bg {
+    background-image: url('https://images.pexels.com/photos/8037008/pexels-photo-8037008.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.light-bg {
+    background-image: url('https://img.freepik.com/free-vector/digital-white-background-with-binary-code-numbers_1017-25335.jpg');
+}
