@@ -2,11 +2,15 @@ const sidebar = document.getElementById('sidebar');
 const burgerBtn = document.getElementById('burgerBtn');
 const dashboardContainer = document.querySelector('.dashboard-container');
 const courseContainer = document.querySelector('.course-container');
-const profileContainer = document.querySelector('.profile-container')
+const profileContainer = document.querySelector('.profile-container');
+const userInfo = document.getElementById('userInfo');
 const closeBtn = document.getElementById('closeBtn');
 const courseBtn = document.getElementById('courseBtn');
 const dashboardBtn = document.getElementById('dashboardBtn');
+const profileBtn = document.getElementById('profileBtn');
+const btnUserClose = document.getElementById('btnUserClose');
 const overlay = document.getElementById('overlay');
+const overlayUserInfo = document.getElementById('overlayUserInfo');
 
 burgerBtn.addEventListener('click', function () {
     sidebar.classList.toggle('hidden');
@@ -49,4 +53,14 @@ dashboardBtn.addEventListener('click', function () {
     courseContainer.classList.add('hidden');
     dashboardContainer.classList.remove('hidden');
     profileContainer.classList.remove('lg:hidden')
+});
+
+profileBtn.addEventListener('click', function () {
+    userInfo.classList.remove('hidden');
+    overlayUserInfo.classList.remove('hidden');
+});
+
+btnUserClose.addEventListener('click', function () {
+    userInfo.classList.add('hidden');
+    overlayUserInfo.classList.add('hidden');
 });
