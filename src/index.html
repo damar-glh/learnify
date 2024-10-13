@@ -16,8 +16,7 @@
 </head>
 <body>
 <section class="dashboard flex min-h-screen w-full overflow-x-hidden">
-    <header id="sidebar"
-            class="hidden min-h-screen fixed w-1/2 z-20 lg:static lg:block lg:w-1/6 p-5 bg-color-pallet-primary transition-all duration-300 ease-in-out">
+    <header id="sidebar" class="hidden min-h-screen fixed w-1/2 z-20 lg:static lg:block lg:w-1/6 p-5 bg-color-pallet-primary transition-all duration-300 ease-in-out">
         <div class="fixed lg:static lg:hidden right-1/2 top-0 p-4 text-color-pallet-quinary">
             <button id="closeBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
@@ -74,6 +73,16 @@
                        class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-user-round">
+                        <path d="M18 20a6 6 0 0 0-12 0"/>
+                        <circle cx="12" cy="10" r="4"/>
+                        <circle cx="12" cy="12" r="10"/>
+                    </svg>
+                    <span>Mentors</span></a></li>
+                <li><a href="#"
+                       class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="lucide lucide-calendar-range">
                         <rect width="18" height="18" x="3" y="4" rx="2"/>
                         <path d="M16 2v4"/>
@@ -94,16 +103,6 @@
                         <circle cx="12" cy="12" r="3"/>
                     </svg>
                     <span>Settings</span></a></li>
-                <li><a href="#"
-                       class="menu-items font-medium text-color-pallet-quinary p-3 hover:text-color-pallet-denary ease-in-out duration-150 flex items-center gap-3.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="lucide lucide-log-out">
-                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-                        <polyline points="16 17 21 12 16 7"/>
-                        <line x1="21" x2="9" y1="12" y2="12"/>
-                    </svg>
-                    <span>Log Out</span></a></li>
             </ul>
         </nav>
         <div class="hidden md:block bg-color-pallet-denary my-10 p-4 rounded-3xl">
@@ -145,18 +144,19 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                              fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-filter">
-                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-                        </svg>
-                    </div>
-                    <div class="text-color-pallet-quinary cursor-pointer hover:text-color-pallet-denary p-3 ease-in-out duration-150">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                              class="lucide lucide-bell-dot">
                             <path d="M19.4 14.9C20.2 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6 .7 0 1.3.1 1.9.3"/>
                             <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
                             <circle cx="18" cy="8" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="text-color-pallet-quinary cursor-pointer hover:text-color-pallet-denary p-3 ease-in-out duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-circle-user-round">
+                            <path d="M18 20a6 6 0 0 0-12 0"/>
+                            <circle cx="12" cy="10" r="4"/>
+                            <circle cx="12" cy="12" r="10"/>
                         </svg>
                     </div>
                 </div>
@@ -438,36 +438,48 @@
                         </a>
                     </div>
                     <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/premium-psd/3d-render-avatar-character_23-2150611774.jpg?w=740" alt="mentor profile" class="h-14 w-14 rounded-full">
+                        <img src="https://img.freepik.com/premium-psd/3d-render-avatar-character_23-2150611774.jpg?w=740"
+                             alt="mentor profile" class="h-14 w-14 rounded-full">
                         <div>
                             <p class="font-medium">Dimas Asya</p>
                             <p class="text-sm">Fullstack Developer</p>
                         </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">Follow</button>
+                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
+                            Follow
+                        </button>
                     </div>
                     <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611734.jpg?t=st=1728795903~exp=1728799503~hmac=1e111e6ae4d539d21abb4606e9008dfefb15e1fdf2596c26ab077dc93653a222&w=740" alt="mentor profile" class="h-14 w-14 rounded-full">
+                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611734.jpg?t=st=1728795903~exp=1728799503~hmac=1e111e6ae4d539d21abb4606e9008dfefb15e1fdf2596c26ab077dc93653a222&w=740"
+                             alt="mentor profile" class="h-14 w-14 rounded-full">
                         <div>
                             <p class="font-medium">Sri Dewi Amalia</p>
                             <p class="text-sm">Back-end Developer</p>
                         </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">Follow</button>
+                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
+                            Follow
+                        </button>
                     </div>
                     <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611728.jpg?t=st=1728796551~exp=1728800151~hmac=27e27b3969f48f37a0be6050fba7fbc53247128ecaddaa3c228fcf81834011c1&w=740" alt="mentor profile" class="h-14 w-14 rounded-full">
+                        <img src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611753.jpg?t=st=1728797508~exp=1728801108~hmac=682a2e7c76618ad6c7bf58b0e7e957c1deecb3f170465ecd5e1075ebfa701a25&w=740"
+                             alt="mentor profile" class="h-14 w-14 rounded-full">
                         <div>
                             <p class="font-medium">Aji Danu Setiawan</p>
                             <p class="text-sm">Front-end Developer</p>
                         </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">Follow</button>
+                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
+                            Follow
+                        </button>
                     </div>
                     <div class="flex items-center justify-around my-4">
-                        <img src="https://img.freepik.com/premium-psd/3d-render-avatar-character_23-2150611783.jpg?w=740" alt="mentor profile" class="h-14 w-14 rounded-full">
+                        <img src="https://img.freepik.com/premium-psd/3d-render-avatar-character_23-2150611783.jpg?w=740"
+                             alt="mentor profile" class="h-14 w-14 rounded-full">
                         <div>
                             <p class="font-medium">Arya Panangsang</p>
                             <p class="text-sm">UI/UX Designer</p>
                         </div>
-                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">Follow</button>
+                        <button class="bg-color-pallet-denary text-color-pallet-primary px-4 py-2 rounded-3xl font-medium border-2 hover:bg-color-pallet-primary hover:text-color-pallet-denary hover:border-color-pallet-denary">
+                            Follow
+                        </button>
                     </div>
                     <button class="w-full mx-auto my-2 px-6 py-3 bg-color-pallet-denary text-color-pallet-primary border-2 font-medium rounded-3xl hover:text-color-pallet-denary hover:bg-color-pallet-primary hover:border-color-pallet-denary ease-in-out duration-150">
                         See All
