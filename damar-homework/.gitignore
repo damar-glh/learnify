@@ -1,5 +1,5 @@
 # Node modules
-damar-homework/node_modules
+node_modules
 
 # Output of Tailwind CSS
 src/output.css
